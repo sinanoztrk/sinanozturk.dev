@@ -23,7 +23,7 @@ export default function Portfolio() {
           marginHorizontal: "auto",
         }}
       >
-        <Form.List navigationTitle="Portfolio">
+        <Form.List navigationTitle="Portfolyo">
           <Form.Section>
             <Form.HStack style={{ gap: 16 }}>
               <Image

@@ -12,12 +12,12 @@ import * as AppleColors from "@bacons/apple-colors";
 const BaconDefaultTheme: Theme = {
   dark: false,
   colors: {
-    primary: AppleColors.systemBlue,
-    background: AppleColors.systemGroupedBackground,
-    card: AppleColors.secondarySystemGroupedBackground,
-    text: AppleColors.label,
-    border: AppleColors.separator,
-    notification: AppleColors.systemRed,
+    primary: AppleColors.systemBlue as any,
+    background: AppleColors.systemGroupedBackground as any,
+    card: AppleColors.secondarySystemGroupedBackground as any,
+    text: AppleColors.label as any,
+    border: AppleColors.separator as any,
+    notification: AppleColors.systemRed as any,
   },
   fonts: DefaultTheme.fonts,
 };

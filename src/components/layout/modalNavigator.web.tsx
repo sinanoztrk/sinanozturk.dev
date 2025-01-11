@@ -7,6 +7,8 @@ import {
   StackRouter,
   StackNavigationState,
   ParamListBase,
+  EventMapBase,
+  StackActionHelpers,
 } from "@react-navigation/native";
 import {
   NativeStackView,
@@ -57,12 +59,12 @@ function MyModalStackNavigator({
     useNavigationBuilder<
       StackNavigationState<ParamListBase>,
       MyModalStackRouterOptions,
-      MyModalStackNavigationOptions,
+      StackActionHelpers<ParamListBase>,
       typeof StackRouter,
-      any  // EventMap type
+      EventMapBase
     >(StackRouter, {
       children,
-      screenOptions,
+      screenOptions: screenOptions as any,
       initialRouteName,
     });
 
@@ -71,7 +73,7 @@ function MyModalStackNavigator({
       <MyModalStackView
         state={state}
         navigation={navigation}
-        descriptors={descriptors}
+        descriptors={descriptors as any}
       />
     </NavigationContent>
   );
@@ -135,7 +137,13 @@ function MyModalStackView({
       <NativeStackView
         state={newStackState}
         navigation={navigation}
-        descriptors={descriptors}
+        descriptors={descriptors as any}
+        describe={() => ({
+          render: () => <></>,
+          options: {},
+          route: { key: "", name: "" },
+          navigation,
+        })}
       />
 
       {/* Render vaul Drawer for active "modal" route on web, with snap points */}
