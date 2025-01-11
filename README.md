@@ -1,50 +1,65 @@
-# Welcome to your Expo app 👋
+# sinanozturk.dev - Personal Portfolio Website
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A modern and elegant portfolio website built with [Expo](https://expo.dev) and [Expo Router](https://docs.expo.dev/router/introduction/). The UI components and design patterns are inspired by [expo-router-forms-components](https://github.com/EvanBacon/expo-router-forms-components) by Evan Bacon.
 
-## Get started
+## 🚀 Tech Stack
 
-1. Install dependencies
+- [Expo](https://expo.dev)
+- [Expo Router](https://docs.expo.dev/router/introduction/) for file-based routing
+- [React Native](https://reactnative.dev)
+- Apple-style UI components
+- Dark mode support
+- iOS-optimized design
 
+## 🛠️ Getting Started
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/sinanozturk.dev.git
+   cd sinanozturk.dev
+   ```
+
+2. Install dependencies:
    ```bash
    npm install
    ```
 
-2. Start the app
-
+3. Start the development server:
    ```bash
-    npx expo start
+   npx expo start
    ```
 
-In the output, you'll find options to open the app in a
+## 🎨 Features
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+- Modern and responsive design
+- iOS-style form components
+- Dark mode support
+- Optimized for web and mobile
+- File-based routing with Expo Router
+- Portfolio project showcase
+- Clean and minimalist UI
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+## 🌟 Inspiration
 
-## Get a fresh project
+This project's UI components and design patterns are inspired by [expo-router-forms-components](https://github.com/EvanBacon/expo-router-forms-components) by Evan Bacon, featuring:
 
-When you're ready, run:
+- iOS-style form components
+- Native-like bottom sheets
+- Adaptive color schemes
+- Smooth animations and transitions
 
-```bash
-npm run reset-project
-```
+## 📱 Platform Support
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+- Web (Primary platform)
+- iOS
+- Android
 
-## Learn more
+## 📄 License
 
-To learn more about developing your project with Expo, look at the following resources:
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 🤝 Contact
 
-## Join the community
+Sinan Öztürk - [Your Contact Information]
 
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Project Link: [https://github.com/yourusername/sinanozturk.dev](https://github.com/yourusername/sinanozturk.dev)
