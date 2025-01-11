@@ -14,12 +14,14 @@ A modern and elegant portfolio website built with [Expo](https://expo.dev) and [
 ## 🛠️ Getting Started
 
 1. Clone the repository:
+
    ```bash
    git clone https://github.com/yourusername/sinanozturk.dev.git
    cd sinanozturk.dev
    ```
 
 2. Install dependencies:
+
    ```bash
    npm install
    ```
@@ -53,13 +55,3 @@ This project's UI components and design patterns are inspired by [expo-router-fo
 - Web (Primary platform)
 - iOS
 - Android
-
-## 📄 License
-
-This project is licensed under the MIT License - see the LICENSE file for details.
-
-## 🤝 Contact
-
-Sinan Öztürk - [Your Contact Information]
-
-Project Link: [https://github.com/yourusername/sinanozturk.dev](https://github.com/yourusername/sinanozturk.dev)
