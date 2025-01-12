@@ -15,10 +15,12 @@ export default function App() {
         <title>Sinan Öztürk - Software Engineer</title>
         <meta
           name="description"
+          property="og:description"
           content="İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
         />
         <meta
-          name="og:image"
+          name="image"
+          property="og:image"
           content="https://sinanozturk.dev/images/avatar.png"
         />
       </Head>
