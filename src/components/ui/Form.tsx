@@ -213,6 +213,19 @@ export const Link = React.forwardRef<
     return children;
   })();
 
+  //ToDo: review later
+  if (process.env.EXPO_OS === "web" && props.target === "_blank") {
+    return (
+      <TouchableOpacity
+        onPress={() => {
+          window.open(props.href as string, "_blank");
+        }}
+      >
+        {resolvedChildren}
+      </TouchableOpacity>
+    );
+  }
+
   return (
     <RouterLink
       dynamicTypeRamp="body"
@@ -547,7 +560,7 @@ function Separator() {
         marginStart: 60,
         borderBottomWidth: 0.5, //StyleSheet.hairlineWidth,
         marginTop: -0.5, // -StyleSheet.hairlineWidth,
-        borderBottomColor: AppleColors.quaternaryLabel
+        borderBottomColor: AppleColors.quaternaryLabel,
       }}
     />
   );

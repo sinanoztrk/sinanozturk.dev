@@ -7,6 +7,7 @@ import { useGlobalSearchParams } from "expo-router";
 import { PortfolioList } from "@/components/PortfolioList";
 import { Fragment } from "react";
 import Head from "expo-router/head";
+import { getLocalizedValue } from "@/localization/i18n";
 
 export async function generateStaticParams(): Promise<
   Record<string, string>[]
@@ -27,8 +28,11 @@ export default function PortfolioItem() {
   return (
     <Fragment>
       <Head>
-        <title>{project?.title} - Sinan Öztürk</title>
-        <meta name="description" content={project?.summary} />
+        <title>{project?.title ?? ""} - Sinan Öztürk</title>
+        <meta
+          name="description"
+          content={getLocalizedValue(project?.summary)}
+        />
       </Head>
       <View
         style={{
@@ -67,7 +71,7 @@ export default function PortfolioItem() {
                   color: AC.secondaryLabel,
                 }}
               >
-                {project?.summary}
+                {getLocalizedValue(project?.summary)}
               </Form.Text>
             </View>
           </Form.Section>
@@ -85,7 +89,7 @@ export default function PortfolioItem() {
           <Form.Section title="Özellikler">
             {project?.features?.map((feature, index) => (
               <View key={index}>
-                <Form.Text>{feature}</Form.Text>
+                <Form.Text>{getLocalizedValue(feature)}</Form.Text>
               </View>
             ))}
           </Form.Section>

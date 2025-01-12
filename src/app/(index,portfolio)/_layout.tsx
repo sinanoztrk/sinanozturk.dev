@@ -2,6 +2,7 @@ import { Platform } from "react-native";
 import * as Colors from "@bacons/apple-colors";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Stack from "@/components/ui/Stack";
+import i18n from "@/localization/i18n";
 
 export default function RootLayout({ segment }: { segment: string }) {
   const name = getRouteName(segment);
@@ -60,8 +61,8 @@ export const unstable_settings = {
 };
 
 const titles = {
-  index: "Home",
-  portfolio: "Portfolio",
+  index: i18n.t("home"),
+  portfolio: i18n.t("portfolio"),
 };
 
 function getRouteName(segment: string) {
