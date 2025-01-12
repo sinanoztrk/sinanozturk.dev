@@ -2,10 +2,26 @@ import * as Colors from "@bacons/apple-colors";
 import { Tabs } from "expo-router";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { BlurView } from "expo-blur";
-import { StyleSheet, useColorScheme } from "react-native";
+import { Platform, StyleSheet, useColorScheme } from "react-native";
+import { useEffect, useLayoutEffect, useState } from "react";
+import { useRef } from "react";
 
 export default function RootLayout() {
   let colorScheme = useColorScheme();
+
+  const hasMounted = useRef(false);
+  const [isColorSchemeLoaded, setIsColorSchemeLoaded] = useState(false);
+
+  useIsomorphicLayoutEffect(() => {
+    if (hasMounted.current) {
+      return;
+    }
+
+    setIsColorSchemeLoaded(true);
+    hasMounted.current = true;
+  }, []);
+
+  if (!isColorSchemeLoaded) return null;
 
   return (
     <Tabs
@@ -54,3 +70,8 @@ export default function RootLayout() {
     </Tabs>
   );
 }
+
+const useIsomorphicLayoutEffect =
+  Platform.OS === "web" && typeof window === "undefined"
+    ? useEffect
+    : useLayoutEffect;

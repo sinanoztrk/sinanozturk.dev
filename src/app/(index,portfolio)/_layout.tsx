@@ -1,4 +1,4 @@
-import { Platform, useColorScheme, Appearance } from "react-native";
+import { Platform, useColorScheme } from "react-native";
 import * as Colors from "@bacons/apple-colors";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Stack from "@/components/ui/Stack";
