@@ -4,7 +4,6 @@ import { usePathname } from "expo-router";
 
 export default function SeoProvider(props: { children: React.ReactNode }) {
   const pathname = usePathname();
-
   const seoMetadata = {
     "/": {
       title: "Sinan Öztürk - Software Engineer",
@@ -26,24 +25,66 @@ export default function SeoProvider(props: { children: React.ReactNode }) {
     },
   };
 
-  return (
-    <Fragment>
+  const renderSEOMetadata = () => {
+    if (pathname == "/portfolio") {
+      return (
+        <Head>
+          <title>Sinan Öztürk - Portfolyo</title>
+          <meta
+            name="description"
+            property="og:description"
+            content={
+              "İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
+            }
+          />
+          <meta
+            property="og:image"
+            content="https://sinanozturk.dev/images/avatar.png"
+          />
+        </Head>
+      );
+    }
+
+    if (pathname.startsWith("/project/")) {
+      return (
+        <Head>
+          <title>Sinan Öztürk - Portfolyo</title>
+          <meta
+            name="description"
+            property="og:description"
+            content={
+              "İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
+            }
+          />
+          <meta
+            property="og:image"
+            content="https://sinanozturk.dev/images/avatar.png"
+          />
+        </Head>
+      );
+    }
+
+    return (
       <Head>
-        <title>
-          {seoMetadata?.[pathname as keyof typeof seoMetadata]?.title}
-        </title>
+        <title>Sinan Öztürk - Software Engineer</title>
         <meta
           name="description"
           property="og:description"
           content={
-            seoMetadata?.[pathname as keyof typeof seoMetadata]?.description
+            "İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
           }
         />
         <meta
           property="og:image"
-          content={seoMetadata?.[pathname as keyof typeof seoMetadata]?.image}
+          content="https://sinanozturk.dev/images/avatar.png"
         />
       </Head>
+    );
+  };
+
+  return (
+    <Fragment>
+      {renderSEOMetadata()}
       {props.children}
     </Fragment>
   );
