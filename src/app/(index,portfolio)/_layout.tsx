@@ -2,7 +2,6 @@ import { Platform, useColorScheme, Appearance } from "react-native";
 import * as Colors from "@bacons/apple-colors";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Stack from "@/components/ui/Stack";
-import i18n from "@/localization/i18n";
 import { BlurView } from "expo-blur";
 
 export default function RootLayout({ segment }: { segment: string }) {
@@ -81,8 +80,8 @@ export const unstable_settings = {
 };
 
 const titles = {
-  index: i18n.t("home"),
-  portfolio: i18n.t("portfolio"),
+  index: "Anasayfa",
+  portfolio: "Portfolyo",
 };
 
 function getRouteName(segment: string) {

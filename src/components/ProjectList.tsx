@@ -2,8 +2,7 @@ import { Href } from "expo-router";
 import { View } from "react-native";
 import * as Form from "@/components/ui/Form";
 import { Image } from "expo-image";
-import { useTranslation } from "react-i18next";
-import { getLocalizedValue, Translation } from "@/localization/i18n";
+import { Translation } from "@/localization/i18n";
 import { Text } from "react-native";
 import * as AC from "@bacons/apple-colors";
 
@@ -31,10 +30,8 @@ export const ProjectList = ({
   data: ProjectListItem[];
   title?: string;
 }) => {
-  const { t } = useTranslation();
-
   return (
-    <Form.Section title={title ?? t("myProjects")}>
+    <Form.Section title={title ?? "Projelerim"}>
       {data?.map((item, index) => (
         <Form.Link href={item.href} key={index}>
           <Image
@@ -46,10 +43,11 @@ export const ProjectList = ({
               marginRight: 16,
             }}
           />
+
           <View style={{ flex: 1 }}>
             <Form.Text style={Form.FormFont.default}>{item?.title}</Form.Text>
             <Form.Text style={Form.FormFont.caption} numberOfLines={1}>
-              {getLocalizedValue(item?.summary)}
+              {item?.summary?.tr}
             </Form.Text>
           </View>
 
@@ -68,7 +66,7 @@ export const ProjectList = ({
                   fontSize: 10,
                 }}
               >
-                {getLocalizedValue(item?.hint?.text)}
+                {item?.hint?.text?.tr}
               </Text>
             </View>
           )}

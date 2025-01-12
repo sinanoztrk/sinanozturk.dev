@@ -7,8 +7,6 @@ import { useGlobalSearchParams } from "expo-router";
 import { ProjectList } from "@/components/ProjectList";
 import { Fragment } from "react";
 import Head from "expo-router/head";
-import { getLocalizedValue } from "@/localization/i18n";
-import { useTranslation } from "react-i18next";
 
 export async function generateStaticParams(): Promise<
   Record<string, string>[]
@@ -21,7 +19,6 @@ export async function generateStaticParams(): Promise<
 }
 
 export default function PortfolioItem() {
-  const { t } = useTranslation();
   const { slug } = useGlobalSearchParams<{ slug: string }>();
   const project = Projects.find(
     (item) => (item.href as any)?.params?.slug === slug
@@ -31,7 +28,7 @@ export default function PortfolioItem() {
     <Fragment>
       <Head>
         <title>{project?.title} - Sinan Öztürk</title>
-        <meta name="description" content={project?.summary?.en} />
+        <meta name="description" content={project?.summary?.tr} />
       </Head>
 
       <Form.List navigationTitle={project?.title}>
@@ -61,13 +58,13 @@ export default function PortfolioItem() {
                 color: AC.secondaryLabel,
               }}
             >
-              {getLocalizedValue(project?.summary)}
+              {project?.summary?.tr}
             </Form.Text>
           </View>
         </Form.Section>
 
         {project?.links && project?.links?.length > 0 && (
-          <Form.Section title={t("links")}>
+          <Form.Section title="Bağlantılar">
             {project?.links?.map((link, index) => (
               <Form.Link key={index} href={link.href} target="_blank">
                 {link.title}
@@ -76,10 +73,10 @@ export default function PortfolioItem() {
           </Form.Section>
         )}
 
-        <Form.Section title={t("features")}>
+        <Form.Section title="Özellikler">
           {project?.features?.map((feature, index) => (
             <View key={index}>
-              <Form.Text>{getLocalizedValue(feature)}</Form.Text>
+              <Form.Text>{feature?.tr}</Form.Text>
             </View>
           ))}
         </Form.Section>
@@ -87,7 +84,7 @@ export default function PortfolioItem() {
         {process.env.EXPO_OS == "web" &&
           project?.images &&
           project?.images?.length > 0 && (
-            <Form.Section title={t("images")}>
+            <Form.Section title="Resimler">
               {project?.images?.map((image, index) => (
                 <img style={{ width: "100%" }} key={index} src={image} />
               ))}
@@ -95,7 +92,7 @@ export default function PortfolioItem() {
           )}
 
         <ProjectList
-          title={t("otherProjects")}
+          title="Diğer Projeler"
           data={Projects?.filter(
             (item) => (item?.href as any)?.params?.slug !== slug
           )}

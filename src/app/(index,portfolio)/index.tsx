@@ -5,7 +5,6 @@ import * as AC from "@bacons/apple-colors";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Fragment } from "react";
 import Head from "expo-router/head";
-import { useTranslation } from "react-i18next";
 import { ProjectList } from "@/components/ProjectList";
 import { Projects } from "@/constants/Projects";
 
@@ -31,8 +30,6 @@ export default function App() {
 }
 
 export const TitleSection = () => {
-  const { t } = useTranslation();
-
   return (
     <Form.Section>
       <Form.HStack style={{ gap: 16 }}>
@@ -47,9 +44,7 @@ export const TitleSection = () => {
 
         <View style={{ gap: 4 }}>
           <Form.Text style={Form.FormFont.default}>Sinan Öztürk</Form.Text>
-          <Form.Text style={Form.FormFont.caption}>
-            {t("softwareEngineer")?.toLowerCase()}
-          </Form.Text>
+          <Form.Text style={Form.FormFont.caption}>yazılım mühendisi</Form.Text>
         </View>
 
         <View style={{ flex: 1 }} />
@@ -71,8 +66,6 @@ export const TitleSection = () => {
 };
 
 export const AboutMeSection = () => {
-  const { t } = useTranslation();
-
   return (
     <Form.Section>
       <View style={{ alignItems: "center", gap: 8, padding: 16, flex: 1 }}>
@@ -99,7 +92,11 @@ export const AboutMeSection = () => {
             color: AC.secondaryLabel,
           }}
         >
-          {t("bio")}
+          İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web
+          frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve
+          frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel
+          uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli
+          geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum.
         </Form.Text>
       </View>
     </Form.Section>
@@ -107,10 +104,8 @@ export const AboutMeSection = () => {
 };
 
 export const LinksSection = () => {
-  const { t } = useTranslation();
-
   return (
-    <Form.Section title={t("links")}>
+    <Form.Section title="Bağlantılar">
       <Form.Link href="https://github.com/sinanoztrk" target="_blank">
         github
       </Form.Link>
