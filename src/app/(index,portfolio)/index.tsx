@@ -3,34 +3,18 @@ import { Image } from "expo-image";
 import * as Form from "@/components/ui/Form";
 import * as AC from "@bacons/apple-colors";
 import { IconSymbol } from "@/components/ui/IconSymbol";
-import { Fragment } from "react";
-import Head from "expo-router/head";
 import { ProjectList } from "@/components/ProjectList";
 import { Projects } from "@/constants/Projects";
 
 export default function App() {
   return (
-    <Fragment>
-      <Head>
-        <title>Sinan Öztürk - Software Engineer</title>
-        <meta
-          name="description"
-          property="og:description"
-          content="İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
-        />
-        <meta
-          property="og:image"
-          content="https://sinanozturk.dev/images/avatar.png"
-        />
-      </Head>
-      <Form.List>
-        <TitleSection />
-        <AboutMeSection />
-        <ChildHoodImage />
-        <LinksSection />
-        <ProjectList data={Projects} />
-      </Form.List>
-    </Fragment>
+    <Form.List>
+      <TitleSection />
+      <AboutMeSection />
+      <ChildHoodImage />
+      <LinksSection />
+      <ProjectList data={Projects} />
+    </Form.List>
   );
 }
 

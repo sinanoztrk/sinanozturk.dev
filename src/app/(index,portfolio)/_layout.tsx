@@ -1,8 +1,8 @@
 import { Platform, useColorScheme } from "react-native";
 import * as Colors from "@bacons/apple-colors";
-import ThemeProvider from "@/providers/ThemeProvider";
 import Stack from "@/components/ui/Stack";
 import { BlurView } from "expo-blur";
+import ThemeProvider from "@/providers/ThemeProvider";
 
 export default function RootLayout({ segment }: { segment: string }) {
   const name = getRouteName(segment);
