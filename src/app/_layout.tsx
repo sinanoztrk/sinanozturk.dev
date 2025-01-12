@@ -4,9 +4,12 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import { I18nextProvider, useTranslation } from "react-i18next";
 import { getLocales } from "expo-localization";
 import i18n from "@/localization/i18n";
+import { BlurView } from "expo-blur";
+import { StyleSheet, useColorScheme } from "react-native";
 
 export default function RootLayout() {
   const { t } = useTranslation();
+  let colorScheme = useColorScheme();
 
   if (!getLocales()[0]?.languageCode) return;
 
@@ -16,9 +19,20 @@ export default function RootLayout() {
         screenOptions={{
           headerShown: false,
           tabBarStyle: {
-            backgroundColor: Colors.systemBackground,
+            position: "absolute",
             borderColor: Colors.systemGray6,
           },
+          tabBarBackground: () => (
+            <BlurView
+              tint={
+                colorScheme == "dark"
+                  ? "systemChromeMaterialDark"
+                  : "systemChromeMaterialLight"
+              }
+              intensity={100}
+              style={StyleSheet.absoluteFill}
+            />
+          ),
         }}
       >
         <Tabs.Screen

@@ -1,20 +1,40 @@
-import { Platform } from "react-native";
+import { Platform, useColorScheme, Appearance } from "react-native";
 import * as Colors from "@bacons/apple-colors";
 import ThemeProvider from "@/providers/ThemeProvider";
 import Stack from "@/components/ui/Stack";
 import i18n from "@/localization/i18n";
+import { BlurView } from "expo-blur";
 
 export default function RootLayout({ segment }: { segment: string }) {
   const name = getRouteName(segment);
+  let colorScheme = useColorScheme();
 
   return (
     <ThemeProvider>
       <Stack
         screenOptions={{
-          headerStyle: {
-            backgroundColor: Colors.systemGroupedBackground as any,
-          },
-          headerShadowVisible: false,
+          ...(process.env.EXPO_OS == "web" && {
+            headerTransparent: true,
+            headerBackground() {
+              return (
+                <BlurView
+                  intensity={100}
+                  tint={
+                    colorScheme == "dark"
+                      ? "systemChromeMaterialDark"
+                      : "systemChromeMaterialLight"
+                  }
+                  style={{
+                    position: "absolute",
+                    width: "100%",
+                    height: "100%",
+                  }}
+                />
+              );
+            },
+            headerTitleAlign: "center",
+            headerShadowVisible: false,
+          }),
           ...(Platform.OS == "ios" && {
             headerTransparent: true,
             headerShadowVisible: true,

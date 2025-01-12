@@ -38,6 +38,10 @@ export const List = forwardRef<
           {
             padding: 16,
             gap: 24,
+            ...(process.env.EXPO_OS == "web" && {
+              paddingTop: 100,
+              paddingBottom: 100,
+            }),
           },
           contentContainerStyle
         )}
