@@ -18,12 +18,12 @@ export default function RootLayout({ segment }: { segment: string }) {
             headerBackground() {
               return (
                 <BlurView
-                  intensity={100}
                   tint={
                     colorScheme == "dark"
                       ? "systemChromeMaterialDark"
                       : "systemChromeMaterialLight"
                   }
+                  intensity={process.env.EXPO_OS == "web" ? 30 : 100}
                   style={{
                     position: "absolute",
                     width: "100%",
