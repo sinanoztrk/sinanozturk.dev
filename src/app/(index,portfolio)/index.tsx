@@ -15,7 +15,7 @@ export default function App() {
   return (
     <Fragment>
       <Head>
-        <title>Sinan Öztürk - {t("softwareEngineer")?.toLowerCase()}</title>
+        <title>Sinan Öztürk - software engineer</title>
         <meta name="description" content={t("bio")} />
       </Head>
       <Form.List>
