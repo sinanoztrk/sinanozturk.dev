@@ -1,6 +1,7 @@
 import { Fragment } from "react";
 import Head from "expo-router/head";
 import { usePathname } from "expo-router";
+import { Projects } from "@/constants/Projects";
 
 export default function SeoProvider(props: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -46,19 +47,22 @@ export default function SeoProvider(props: { children: React.ReactNode }) {
     }
 
     if (pathname.startsWith("/project/")) {
+      const slug = pathname.split("/project/")[1];
+      const project = Projects.find(
+        (item) => (item.href as any)?.params?.slug === slug
+      );
+
       return (
         <Head>
-          <title>Sinan Öztürk - Portfolyo</title>
+          <title>{project?.title} - Sinan Öztürk</title>
           <meta
             name="description"
             property="og:description"
-            content={
-              "İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
-            }
+            content={project?.summary?.tr}
           />
           <meta
             property="og:image"
-            content="https://sinanozturk.dev/images/avatar.png"
+            content={`https://sinanozturk.dev/images/${slug}/cover.png`}
           />
         </Head>
       );
