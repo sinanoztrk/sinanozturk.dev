@@ -15,12 +15,14 @@ export default function App() {
   return (
     <Fragment>
       <Head>
-        <title>Sinan Öztürk - {t("softwareEngineer")?.toLowerCase()}</title>
+        <title>Sinan Öztürk - software engineer</title>
+        <meta name="og:title" content={`Sinan Öztürk - software engineer`} />
         <meta
-          name="og:title"
-          content={`Sinan Öztürk - ${t("softwareEngineer")?.toLowerCase()}`}
+          name="og:description"
+          content={
+            "I am a software engineer based in Istanbul. Specializing in frontend development, I create web and mobile projects. I provide custom solutions to companies with a focus on user experience. I am dedicated to continuous self-improvement and staying current with technological innovations."
+          }
         />
-        <meta name="og:description" content={t("bio")} />
         <meta
           name="og:image"
           content="https://sinanozturk.dev/images/avatar.png"
