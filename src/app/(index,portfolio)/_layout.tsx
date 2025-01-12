@@ -23,7 +23,7 @@ export default function RootLayout({ segment }: { segment: string }) {
                       ? "systemChromeMaterialDark"
                       : "systemChromeMaterialLight"
                   }
-                  intensity={process.env.EXPO_OS == "web" ? 30 : 100}
+                  intensity={process.env.EXPO_OS == "web" ? 75 : 100}
                   style={{
                     position: "absolute",
                     width: "100%",

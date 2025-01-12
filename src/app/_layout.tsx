@@ -29,7 +29,7 @@ export default function RootLayout() {
                   ? "systemChromeMaterialDark"
                   : "systemChromeMaterialLight"
               }
-              intensity={process.env.EXPO_OS == "web" ? 30 : 100}
+              intensity={process.env.EXPO_OS == "web" ? 75 : 100}
               style={StyleSheet.absoluteFill}
             />
           ),
