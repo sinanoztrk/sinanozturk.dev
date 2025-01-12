@@ -13,16 +13,10 @@ export default function App() {
   return (
     <Fragment>
       <Head>
-        <title>Sinan Öztürk - software engineer</title>
+        <title>Sinan Öztürk - Software Engineer</title>
         <meta
           name="description"
-          content={
-            "I am a software engineer based in Istanbul. Specializing in frontend development, I create web and mobile projects. I provide custom solutions to companies with a focus on user experience. I am dedicated to continuous self-improvement and staying current with technological innovations."
-          }
-        />
-        <meta
-          name="og:image"
-          content="https://sinanozturk.dev/images/avatar.png"
+          content="İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum."
         />
       </Head>
       <Form.List>

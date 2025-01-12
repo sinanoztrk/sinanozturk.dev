@@ -30,16 +30,8 @@ export default function PortfolioItem() {
   return (
     <Fragment>
       <Head>
-        <title>{project?.title ?? ""} - Sinan Öztürk</title>
-        <meta name="og:title" content={`${project?.title} - Sinan Öztürk`} />
-        <meta
-          name="og:description"
-          content={getLocalizedValue(project?.summary)}
-        />
-        <meta
-          name="og:image"
-          content={`https://sinanozturk.dev/images/${slug}/cover.png`}
-        />
+        <title>{project?.title} - Sinan Öztürk</title>
+        <meta name="description" content={project?.summary?.en} />
       </Head>
 
       <Form.List navigationTitle={project?.title}>
