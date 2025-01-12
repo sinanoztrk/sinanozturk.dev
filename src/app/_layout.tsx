@@ -1,9 +1,10 @@
-import { Tabs } from "expo-router";
 import * as Colors from "@bacons/apple-colors";
+import { Tabs } from "expo-router";
 import { IconSymbol } from "@/components/ui/IconSymbol";
 import { I18nextProvider, useTranslation } from "react-i18next";
-import i18n from "@/localization/i18n";
 import { getLocales } from "expo-localization";
+import i18n from "@/localization/i18n";
+
 export default function RootLayout() {
   const { t } = useTranslation();
 
@@ -16,7 +17,7 @@ export default function RootLayout() {
           headerShown: false,
           tabBarStyle: {
             backgroundColor: Colors.systemBackground,
-            borderColor: Colors.tertiarySystemBackground,
+            borderColor: Colors.systemGray6,
           },
         }}
       >

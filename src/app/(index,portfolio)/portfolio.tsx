@@ -18,20 +18,13 @@ export default function Portfolio() {
         <title>Sinan Öztürk - {t("portfolio")}</title>
         <meta name="description" content="Sinan Öztürk - Portfolyo" />
       </Head>
-      <View
-        style={{
-          flex: 1,
-          width: "100%",
-          maxWidth: 650,
-          marginHorizontal: "auto",
-        }}
-      >
-        <Form.List>
-          <TitleSection />
-          <AboutMeSection />
-          <BigProjectList />
-        </Form.List>
-      </View>
+
+      <Form.List>
+        <TitleSection />
+        <AboutMeSection />
+        <ProjectList data={Projects} />
+        <GithubRepositoryList />
+      </Form.List>
     </Fragment>
   );
 }

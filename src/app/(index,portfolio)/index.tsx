@@ -8,7 +8,6 @@ import Head from "expo-router/head";
 import { useTranslation } from "react-i18next";
 import { ProjectList } from "@/components/ProjectList";
 import { Projects } from "@/constants/Projects";
-import { GithubRepositoryList } from "@/components/GithubRepositoryList";
 
 export default function App() {
   const { t } = useTranslation();
@@ -19,36 +18,13 @@ export default function App() {
         <title>Sinan Öztürk - {t("softwareEngineer")?.toLowerCase()}</title>
         <meta name="description" content={t("bio")} />
       </Head>
-      <View
-        style={{
-          flex: 1,
-          width: "100%",
-          maxWidth: 650,
-          marginHorizontal: "auto",
-        }}
-      >
-        <Form.List>
-          <TitleSection />
-          <AboutMeSection />
-          <ProjectList data={Projects} />
-          <GithubRepositoryList />
-
-          <Form.Section title={t("links")}>
-            <Form.Link href="https://github.com/sinanoztrk" target="_blank">
-              github
-            </Form.Link>
-            <Form.Link
-              href="https://www.linkedin.com/in/sinanozturkk/"
-              target="_blank"
-            >
-              linkedin
-            </Form.Link>
-            <Form.Link href="https://x.com/sinanozturkdev" target="_blank">
-              x
-            </Form.Link>
-          </Form.Section>
-        </Form.List>
-      </View>
+      <Form.List>
+        <TitleSection />
+        <AboutMeSection />
+        <ChildHoodImage />
+        <LinksSection />
+        <ProjectList data={Projects} />
+      </Form.List>
     </Fragment>
   );
 }
@@ -60,7 +36,7 @@ export const TitleSection = () => {
     <Form.Section>
       <Form.HStack style={{ gap: 16 }}>
         <Image
-          source={{ uri: "https://github.com/sinanoztrk.png" }}
+          source={require("@/assets/images/avatar.png")}
           style={{
             aspectRatio: 1,
             height: 48,
@@ -100,7 +76,7 @@ export const AboutMeSection = () => {
     <Form.Section>
       <View style={{ alignItems: "center", gap: 8, padding: 16, flex: 1 }}>
         <Image
-          source={{ uri: "https://github.com/sinanoztrk.png" }}
+          source={require("@/assets/images/avatar.png")}
           style={{
             aspectRatio: 1,
             height: 64,
@@ -126,5 +102,42 @@ export const AboutMeSection = () => {
         </Form.Text>
       </View>
     </Form.Section>
+  );
+};
+
+export const LinksSection = () => {
+  const { t } = useTranslation();
+
+  return (
+    <Form.Section title={t("links")}>
+      <Form.Link href="https://github.com/sinanoztrk" target="_blank">
+        github
+      </Form.Link>
+      <Form.Link
+        href="https://www.linkedin.com/in/sinanozturkk/"
+        target="_blank"
+      >
+        linkedin
+      </Form.Link>
+      <Form.Link href="https://x.com/sinanozturkdev" target="_blank">
+        x
+      </Form.Link>
+    </Form.Section>
+  );
+};
+
+export const ChildHoodImage = () => {
+  return (
+    <Image
+      source={require("@/assets/images/childhood.jpg")}
+      style={{
+        width: "100%",
+        height: 200,
+        borderRadius: 10,
+        filter: "grayscale(40%)" as any,
+      }}
+      contentFit="cover"
+      contentPosition="center"
+    />
   );
 };
