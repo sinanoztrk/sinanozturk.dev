@@ -6,6 +6,9 @@ import { IconSymbol } from "@/components/ui/IconSymbol";
 import { Fragment } from "react";
 import Head from "expo-router/head";
 import { useTranslation } from "react-i18next";
+import { ProjectList } from "@/components/ProjectList";
+import { Projects } from "@/constants/Projects";
+import { GithubRepositoryList } from "@/components/GithubRepositoryList";
 
 export default function App() {
   const { t } = useTranslation();
@@ -27,6 +30,8 @@ export default function App() {
         <Form.List>
           <TitleSection />
           <AboutMeSection />
+          <ProjectList data={Projects} />
+          <GithubRepositoryList />
 
           <Form.Section title={t("links")}>
             <Form.Link href="https://github.com/sinanoztrk" target="_blank">

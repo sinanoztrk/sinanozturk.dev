@@ -1,7 +1,7 @@
-import { PortfolioListItem } from "@/components/PortfolioList";
+import { ProjectListItem } from "@/components/ProjectList";
 import * as AC from "@bacons/apple-colors";
 
-export const PortfolioItems: PortfolioListItem[] = [
+export const Projects: ProjectListItem[] = [
   {
     title: "Docvivo Health",
     image: require("../assets/images/project/docvivo-health/cover.png"),

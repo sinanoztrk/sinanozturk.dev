@@ -2,26 +2,28 @@ import { View } from "react-native";
 import { Image } from "expo-image";
 import * as Form from "@/components/ui/Form";
 import * as AC from "@bacons/apple-colors";
-import { PortfolioItems } from "@/constants/Portfolio";
+import { Projects } from "@/constants/Projects";
 import { useGlobalSearchParams } from "expo-router";
-import { PortfolioList } from "@/components/PortfolioList";
+import { ProjectList } from "@/components/ProjectList";
 import { Fragment } from "react";
 import Head from "expo-router/head";
 import { getLocalizedValue } from "@/localization/i18n";
+import { useTranslation } from "react-i18next";
 
 export async function generateStaticParams(): Promise<
   Record<string, string>[]
 > {
   // Return an array of params to generate static HTML files for.
   // Each entry in the array will be a new page.
-  return PortfolioItems.map((item) => ({
+  return Projects.map((item) => ({
     slug: (item.href as any)?.params?.slug,
   }));
 }
 
 export default function PortfolioItem() {
+  const { t } = useTranslation();
   const { slug } = useGlobalSearchParams<{ slug: string }>();
-  const project = PortfolioItems.find(
+  const project = Projects.find(
     (item) => (item.href as any)?.params?.slug === slug
   );
 
@@ -94,7 +96,8 @@ export default function PortfolioItem() {
             ))}
           </Form.Section>
 
-          {project?.images && project?.images?.length > 0 && (
+          {/* ToDo : check this section */}
+          {/*   {project?.images && project?.images?.length > 0 && (
             <Form.Section title="Resimler">
               {project?.images?.map((image, index) => (
                 <Image
@@ -104,11 +107,11 @@ export default function PortfolioItem() {
                 />
               ))}
             </Form.Section>
-          )}
+          )} */}
 
-          <PortfolioList
-            title="Diğer Projeler"
-            data={PortfolioItems?.filter(
+          <ProjectList
+            title={t("otherProjects")}
+            data={Projects?.filter(
               (item) => (item?.href as any)?.params?.slug !== slug
             )}
           />

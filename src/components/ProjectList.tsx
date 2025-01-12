@@ -7,7 +7,7 @@ import { getLocalizedValue, Translation } from "@/localization/i18n";
 import { Text } from "react-native";
 import * as AC from "@bacons/apple-colors";
 
-export type PortfolioListItem = {
+export type ProjectListItem = {
   title: string;
   image: string;
   href: Href;
@@ -24,11 +24,11 @@ export type PortfolioListItem = {
   };
 };
 
-export const PortfolioList = ({
+export const ProjectList = ({
   data,
   title,
 }: {
-  data: PortfolioListItem[];
+  data: ProjectListItem[];
   title?: string;
 }) => {
   const { t } = useTranslation();

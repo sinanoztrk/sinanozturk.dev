@@ -1,12 +1,13 @@
 import { View } from "react-native";
 import * as Form from "@/components/ui/Form";
-import { PortfolioItems } from "@/constants/Portfolio";
-import { PortfolioList } from "@/components/PortfolioList";
+import { Projects } from "@/constants/Projects";
+import { ProjectList } from "@/components/ProjectList";
 import { Fragment } from "react";
 import Head from "expo-router/head";
 import { AboutMeSection, TitleSection } from "./index";
 import { useTranslation } from "react-i18next";
 import { GithubRepositoryList } from "@/components/GithubRepositoryList";
+import { BigProjectList } from "@/components/BigProjectList";
 
 export default function Portfolio() {
   const { t } = useTranslation();
@@ -28,8 +29,7 @@ export default function Portfolio() {
         <Form.List>
           <TitleSection />
           <AboutMeSection />
-          <PortfolioList data={PortfolioItems} />
-          <GithubRepositoryList />
+          <BigProjectList />
         </Form.List>
       </View>
     </Fragment>
