@@ -34,7 +34,6 @@ export default function PortfolioItem() {
           content={project?.summary?.tr}
         />
         <meta
-          name="image"
           property="og:image"
           content={`https://sinanozturk.dev/images/${slug}/cover.png`}
         />
