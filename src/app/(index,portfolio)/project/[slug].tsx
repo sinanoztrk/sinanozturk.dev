@@ -70,7 +70,7 @@ export default function PortfolioItem() {
         </Form.Section>
 
         {project?.links && project?.links?.length > 0 && (
-          <Form.Section title="Bağlantılar">
+          <Form.Section title={t("links")}>
             {project?.links?.map((link, index) => (
               <Form.Link key={index} href={link.href} target="_blank">
                 {link.title}
@@ -79,7 +79,7 @@ export default function PortfolioItem() {
           </Form.Section>
         )}
 
-        <Form.Section title="Özellikler">
+        <Form.Section title={t("features")}>
           {project?.features?.map((feature, index) => (
             <View key={index}>
               <Form.Text>{getLocalizedValue(feature)}</Form.Text>
@@ -90,9 +90,9 @@ export default function PortfolioItem() {
         {process.env.EXPO_OS == "web" &&
           project?.images &&
           project?.images?.length > 0 && (
-            <Form.Section title="Resimler">
+            <Form.Section title={t("images")}>
               {project?.images?.map((image, index) => (
-                <img key={index} src={image} />
+                <img style={{ width: "100%" }} key={index} src={image} />
               ))}
             </Form.Section>
           )}

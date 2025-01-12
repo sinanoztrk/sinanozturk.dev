@@ -4,7 +4,7 @@ import * as AC from "@bacons/apple-colors";
 export const Projects: ProjectListItem[] = [
   {
     title: "Docvivo Health",
-    image: require("../assets/images/project/docvivo-health/cover.png"),
+    image: require("@/assets/images/docvivo-health/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -54,7 +54,7 @@ export const Projects: ProjectListItem[] = [
   },
   {
     title: "Docvivo CRM",
-    image: require("../assets/images/project/docvivo-crm/cover.png"),
+    image: require("@/assets/images/docvivo-crm/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -88,13 +88,13 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/docvivo-crm/isometric-3.png"),
-      require("../assets/images/project/docvivo-crm/isometric-2.png"),
-      require("../assets/images/project/docvivo-crm/isometric-1.png"),
-      require("../assets/images/project/docvivo-crm/builder-template-1.png"),
-      require("../assets/images/project/docvivo-crm/builder-template.png"),
-      require("../assets/images/project/docvivo-crm/builder-form.png"),
-      require("../assets/images/project/docvivo-crm/builder-form-1.png"),
+      "/images/docvivo-crm/isometric-3.png",
+      "/images/docvivo-crm/isometric-2.png",
+      "/images/docvivo-crm/isometric-1.png",
+      "/images/docvivo-crm/builder-template-1.png",
+      "/images/docvivo-crm/builder-template.png",
+      "/images/docvivo-crm/builder-form.png",
+      "/images/docvivo-crm/builder-form-1.png",
     ],
     hint: {
       backgroundColor: AC.systemGreen,
@@ -112,7 +112,7 @@ export const Projects: ProjectListItem[] = [
   },
   {
     title: "Docvivo Mobile",
-    image: require("../assets/images/project/docvivo-mobile/cover.png"),
+    image: require("@/assets/images/docvivo-mobile/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -146,19 +146,19 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/docvivo-mobile/image-1.png"),
-      require("../assets/images/project/docvivo-mobile/image-2.png"),
-      require("../assets/images/project/docvivo-mobile/image-3.png"),
-      require("../assets/images/project/docvivo-mobile/image-4.png"),
-      require("../assets/images/project/docvivo-mobile/image-5.png"),
-      require("../assets/images/project/docvivo-mobile/image-6.png"),
-      require("../assets/images/project/docvivo-mobile/image-7.png"),
-      require("../assets/images/project/docvivo-mobile/image-8.png"),
+      "/images/docvivo-mobile/image-1.png",
+      "/images/docvivo-mobile/image-2.png",
+      "/images/docvivo-mobile/image-3.png",
+      "/images/docvivo-mobile/image-4.png",
+      "/images/docvivo-mobile/image-5.png",
+      "/images/docvivo-mobile/image-6.png",
+      "/images/docvivo-mobile/image-7.png",
+      "/images/docvivo-mobile/image-8.png",
     ],
   },
   {
     title: "Mobilyaka",
-    image: require("../assets/images/project/mobilyaka/cover.png"),
+    image: require("@/assets/images/mobilyaka/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -200,12 +200,12 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/mobilyaka/desktop-1.webp"),
-      require("../assets/images/project/mobilyaka/desktop-2.webp"),
-      require("../assets/images/project/mobilyaka/desktop-3.webp"),
-      require("../assets/images/project/mobilyaka/desktop-4.webp"),
-      require("../assets/images/project/mobilyaka/desktop-5.webp"),
-      require("../assets/images/project/mobilyaka/desktop-6.webp"),
+      "/images/mobilyaka/desktop-1.webp",
+      "/images/mobilyaka/desktop-2.webp",
+      "/images/mobilyaka/desktop-3.webp",
+      "/images/mobilyaka/desktop-4.webp",
+      "/images/mobilyaka/desktop-5.webp",
+      "/images/mobilyaka/desktop-6.webp",
     ],
     hint: {
       backgroundColor: AC.systemOrange,
@@ -223,7 +223,7 @@ export const Projects: ProjectListItem[] = [
   },
   {
     title: "Heyvet",
-    image: require("../assets/images/project/heyvet/cover.png"),
+    image: require("@/assets/images/heyvet/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -257,17 +257,17 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/heyvet/image-1.png"),
-      require("../assets/images/project/heyvet/image-2.png"),
-      require("../assets/images/project/heyvet/image-3.png"),
-      require("../assets/images/project/heyvet/image-4.png"),
-      require("../assets/images/project/heyvet/image-5.png"),
-      require("../assets/images/project/heyvet/image-6.png"),
+      "/images/heyvet/image-1.png",
+      "/images/heyvet/image-2.png",
+      "/images/heyvet/image-3.png",
+      "/images/heyvet/image-4.png",
+      "/images/heyvet/image-5.png",
+      "/images/heyvet/image-6.png",
     ],
   },
   {
     title: "Emlak Konut",
-    image: require("../assets/images/project/emlak-konut/cover.png"),
+    image: require("@/assets/images/emlak-konut/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -301,15 +301,15 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/emlak-konut/image-1.png"),
-      require("../assets/images/project/emlak-konut/image-2.png"),
-      require("../assets/images/project/emlak-konut/image-3.png"),
-      require("../assets/images/project/emlak-konut/image-4.png"),
+      "/images/emlak-konut/image-1.png",
+      "/images/emlak-konut/image-2.png",
+      "/images/emlak-konut/image-3.png",
+      "/images/emlak-konut/image-4.png",
     ],
   },
   {
     title: "Toki",
-    image: require("../assets/images/project/toki/cover.png"),
+    image: require("@/assets/images/toki/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -343,14 +343,14 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/toki/desktop-1.webp"),
-      require("../assets/images/project/toki/desktop-2.webp"),
-      require("../assets/images/project/toki/desktop-3.webp"),
+      "/images/toki/desktop-1.webp",
+      "/images/toki/desktop-2.webp",
+      "/images/toki/desktop-3.webp",
     ],
   },
   {
     title: "Halk Yatırım",
-    image: require("../assets/images/project/halk-yatirim/cover.png"),
+    image: require("@/assets/images/halk-yatirim/cover.png"),
     href: {
       pathname: "/project/[slug]",
       params: {
@@ -384,12 +384,12 @@ export const Projects: ProjectListItem[] = [
       },
     ],
     images: [
-      require("../assets/images/project/halk-yatirim/desktop-1.webp"),
-      require("../assets/images/project/halk-yatirim/mobile-1.png"),
-      require("../assets/images/project/halk-yatirim/mobile-2.png"),
-      require("../assets/images/project/halk-yatirim/mobile-3.png"),
-      require("../assets/images/project/halk-yatirim/desktop-2.webp"),
-      require("../assets/images/project/halk-yatirim/desktop-3.webp"),
+      "/images/halk-yatirim/desktop-1.webp",
+      "/images/halk-yatirim/mobile-1.png",
+      "/images/halk-yatirim/mobile-2.png",
+      "/images/halk-yatirim/mobile-3.png",
+      "/images/halk-yatirim/desktop-2.webp",
+      "/images/halk-yatirim/desktop-3.webp",
     ],
   },
 ];
