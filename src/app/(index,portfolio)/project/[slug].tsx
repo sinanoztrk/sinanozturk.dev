@@ -29,6 +29,10 @@ export default function PortfolioItem() {
       <Head>
         <title>{project?.title} - Sinan Öztürk</title>
         <meta name="description" content={project?.summary?.tr} />
+        <meta
+          name="og:image"
+          content={`https://sinanozturk.dev/images/${slug}/cover.png`}
+        />
       </Head>
 
       <Form.List navigationTitle={project?.title}>
