@@ -10,13 +10,20 @@ import { ProjectList } from "@/components/ProjectList";
 import { Projects } from "@/constants/Projects";
 
 export default function App() {
+  const { t } = useTranslation();
+
   return (
     <Fragment>
       <Head>
-        <title>Sinan Öztürk - software engineer</title>
+        <title>Sinan Öztürk - {t("softwareEngineer")?.toLowerCase()}</title>
         <meta
-          name="description"
-          content="I am a software engineer based in Istanbul. Specializing in frontend development, I create web and mobile projects. I provide custom solutions to companies with a focus on user experience. I am dedicated to continuous self-improvement and staying current with technological innovations."
+          name="og:title"
+          content={`Sinan Öztürk - ${t("softwareEngineer")?.toLowerCase()}`}
+        />
+        <meta name="og:description" content={t("bio")} />
+        <meta
+          name="og:image"
+          content="https://sinanozturk.dev/images/avatar.png"
         />
       </Head>
       <Form.List>

@@ -31,9 +31,14 @@ export default function PortfolioItem() {
     <Fragment>
       <Head>
         <title>{project?.title ?? ""} - Sinan Öztürk</title>
+        <meta name="og:title" content={`${project?.title} - Sinan Öztürk`} />
         <meta
-          name="description"
+          name="og:description"
           content={getLocalizedValue(project?.summary)}
+        />
+        <meta
+          name="og:image"
+          content={`https://sinanozturk.dev/images/${slug}/cover.png`}
         />
       </Head>
 

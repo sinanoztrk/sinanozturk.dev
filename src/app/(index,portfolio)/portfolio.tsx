@@ -7,7 +7,6 @@ import Head from "expo-router/head";
 import { AboutMeSection, TitleSection } from "./index";
 import { useTranslation } from "react-i18next";
 import { GithubRepositoryList } from "@/components/GithubRepositoryList";
-import { BigProjectList } from "@/components/BigProjectList";
 
 export default function Portfolio() {
   const { t } = useTranslation();
@@ -16,7 +15,12 @@ export default function Portfolio() {
     <Fragment>
       <Head>
         <title>Sinan Öztürk - {t("portfolio")}</title>
-        <meta name="description" content="Sinan Öztürk - Portfolyo" />
+        <meta name="og:title" content={`Sinan Öztürk - ${t("portfolio")}`} />
+        <meta name="og:description" content={t("bio")} />
+        <meta
+          name="og:image"
+          content="https://sinanozturk.dev/images/avatar.png"
+        />
       </Head>
 
       <Form.List>
