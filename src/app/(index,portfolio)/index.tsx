@@ -81,11 +81,10 @@ export const AboutMeSection = () => {
             color: AC.secondaryLabel,
           }}
         >
-          İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web
-          frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve
-          frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel
-          uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli
-          geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum.
+          İstanbul'da yaşayan bir yazılım mühendisiyim. Mobil ve web frontend
+          geliştirme alanında uzmanlaşmış olup, kullanıcı odaklı ve işlevsel
+          uygulamalar geliştiriyorum. Boş zamanlarımda full-stack projeler
+          üzerinde çalışarak kendimi geliştirmeye devam ediyorum.
         </Form.Text>
       </View>
     </Form.Section>

@@ -14,6 +14,8 @@ interface MetaTagsProps {
 export default function SeoProvider(props: { children: React.ReactNode }) {
   const pathname = usePathname();
   const baseUrl = "https://sinanozturk.dev";
+  const description =
+    "İstanbul'da yaşayan bir yazılım mühendisiyim. Mobil ve web frontend geliştirme alanında uzmanlaşmış olup, kullanıcı odaklı ve işlevsel uygulamalar geliştiriyorum. Boş zamanlarımda full-stack projeler üzerinde çalışarak kendimi geliştirmeye devam ediyorum.";
 
   const generateMetaTags = ({
     title,
@@ -50,8 +52,6 @@ export default function SeoProvider(props: { children: React.ReactNode }) {
 
   const renderSEOMetadata = () => {
     if (pathname == "/portfolio") {
-      const description =
-        "İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum.";
       const title = "Sinan Öztürk - Portfolyo";
       const image = `${baseUrl}/images/avatar.png`;
 
@@ -89,8 +89,6 @@ export default function SeoProvider(props: { children: React.ReactNode }) {
       );
     }
 
-    const description =
-      "İstanbul'da yaşayan 25 yaşında bir yazılım mühendisiyim. Mobil ve web frontend geliştirme konusunda uzmanım. Boş zamanlarımda backend ve frontend projelerle ilgileniyorum. Kullanıcı odaklı ve işlevsel uygulamalar geliştirerek şirketlerle çalışıyorum. Kendimi sürekli geliştirmeye ve yeni teknolojilere açık olmaya özen gösteriyorum.";
     const title = "Sinan Öztürk - Software Engineer";
     const image = `${baseUrl}/images/avatar.png`;
 
