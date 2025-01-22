@@ -103,7 +103,7 @@ export const LinksSection = () => {
       >
         linkedin
       </Form.Link>
-      <Form.Link href="https://x.com/sinanozturkdev" target="_blank">
+      <Form.Link href="https://x.com/snanoztrk" target="_blank">
         x
       </Form.Link>
     </Form.Section>
