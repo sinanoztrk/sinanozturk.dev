@@ -33,7 +33,7 @@ export const TitleSection = () => {
 
         <View style={{ gap: 4 }}>
           <Form.Text style={Form.FormFont.default}>Sinan Öztürk</Form.Text>
-          <Form.Text style={Form.FormFont.caption}>yazılım mühendisi - server test</Form.Text>
+          <Form.Text style={Form.FormFont.caption}>yazılım mühendisi</Form.Text>
         </View>
 
         <View style={{ flex: 1 }} />
