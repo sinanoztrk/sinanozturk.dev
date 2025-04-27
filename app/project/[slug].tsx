@@ -4,6 +4,7 @@ import * as Form from "@/components/ui/Form";
 import * as AC from "@bacons/apple-colors";
 import { useGlobalSearchParams } from "expo-router";
 import { Projects } from "@/constants/projects";
+import Head from "expo-router/head";
 
 export async function generateStaticParams(): Promise<
   Record<string, string>[]
@@ -23,6 +24,10 @@ export default function PortfolioItem() {
 
   return (
     <Form.List navigationTitle={project?.title}>
+      <Head>
+        <title>{project?.title}</title>
+        <meta name="description" content={project?.summary?.tr} />
+      </Head>
       <Form.Section>
         <View style={{ alignItems: "center", gap: 8, padding: 16, flex: 1 }}>
           <Image

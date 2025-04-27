@@ -16,6 +16,7 @@ import Animated, {
   useAnimatedStyle,
   useScrollViewOffset,
 } from "react-native-reanimated";
+import Head from "expo-router/head";
 
 export default function Page() {
   const ref = useAnimatedRef<Animated.ScrollView>();
@@ -31,6 +32,13 @@ export default function Page() {
 
   return (
     <View style={{ flex: 1 }}>
+      <Head>
+        <title>Sinan Öztürk - Yazılım Mühendisi</title>
+        <meta
+          name="description"
+          content="Sinan Öztürk yazılım mühendisi, yazılım geliştirici, yazılım uzmanı, yazılım danışmanı, yazılım danışmanı, yazılım danışmanı, yazılım danışmanı"
+        />
+      </Head>
       <Stack.Screen
         options={{
           headerLargeTitle: false,
