@@ -17,6 +17,7 @@ import Animated, {
   useScrollViewOffset,
 } from "react-native-reanimated";
 import Head from "expo-router/head";
+import { AppStoreAppsView } from "@/features/AppStoreAppsView";
 
 export default function Page() {
   const ref = useAnimatedRef<Animated.ScrollView>();
@@ -99,6 +100,7 @@ export default function Page() {
         <AboutView />
         <ChildHoodView />
         <LinksView />
+        <AppStoreAppsView />
         <ProjectsView />
         <GithubRepositoriesView />
         <Form.Text style={[Form.FormFont.caption, { textAlign: "center" }]}>

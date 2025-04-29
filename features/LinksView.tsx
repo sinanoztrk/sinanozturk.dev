@@ -15,6 +15,9 @@ export const LinksView = () => {
       <Form.Link href="https://x.com/snanoztrk" target="_blank">
         x
       </Form.Link>
+      <Form.Link href="https://apps.apple.com/us/developer/sinan-ozturk/id1802510157" target="_blank">
+        app store
+      </Form.Link>
     </Form.Section>
   );
 };
