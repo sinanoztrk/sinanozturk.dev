@@ -30,7 +30,7 @@ export const AppStoreAppsView = () => {
   return (
     <Form.Section title="App Store">
       {apps?.map((item, index) => (
-        <Form.Link href={item?.href} target="_blank">
+        <Form.Link key={index} href={item?.href} target="_blank">
           <Image
             source={{ uri: item?.image }}
             style={{

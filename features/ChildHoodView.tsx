@@ -1,10 +1,10 @@
-import { Image } from "expo-image";
+import { SingleImage } from "@/components/ui/SingleImage";
 import { View } from "react-native";
 
 export const ChildHoodView = () => {
   return (
     <View style={{ paddingHorizontal: 16 }}>
-      <Image
+      <SingleImage
         source={require("@/assets/images/childhood.jpg")}
         style={{
           width: "100%",
@@ -12,8 +12,6 @@ export const ChildHoodView = () => {
           borderRadius: 10,
           filter: "grayscale(40%)" as any,
         }}
-        contentFit="cover"
-        contentPosition="center"
       />
     </View>
   );

@@ -1,13 +1,13 @@
 import * as AC from "@bacons/apple-colors";
 import * as Form from "@/components/ui/Form";
-import { Image } from "expo-image";
 import { View } from "react-native";
+import { SingleImage } from "@/components/ui/SingleImage";
 
 export const AboutView = () => {
   return (
     <Form.Section>
       <View style={{ alignItems: "center", gap: 8, padding: 16, flex: 1 }}>
-        <Image
+        <SingleImage
           source={{ uri: "https://github.com/sinanoztrk.png" }}
           style={{
             aspectRatio: 1,

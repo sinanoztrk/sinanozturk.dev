@@ -1,14 +1,14 @@
 import * as Form from "@/components/ui/Form";
 import { IconSymbol } from "@/components/ui/IconSymbol";
-import { Image } from "expo-image";
 import { View } from "react-native";
 import * as AC from "@bacons/apple-colors";
+import { SingleImage } from "@/components/ui/SingleImage";
 
 export const BannerView = () => {
   return (
     <Form.Section>
       <Form.HStack style={{ gap: 16 }}>
-        <Image
+        <SingleImage
           source={{ uri: "https://github.com/sinanoztrk.png" }}
           style={{
             aspectRatio: 1,
