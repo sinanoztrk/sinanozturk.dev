@@ -6,6 +6,13 @@ import { View } from "react-native";
 export const AppStoreAppsView = () => {
   const apps = [
     {
+      title: "HeyVet",
+      description: "Hayvanları İyileştir , Doğayı İyileştir",
+      image:
+        "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/eb/0c/e3/eb0ce3d8-485d-5532-3c37-34b4a9219285/AppIcon-0-0-1x_U007epad-0-1-85-220.png/360x360bb.png&quot",
+      href: "https://apps.apple.com/app/heyvet/id6746422091",
+    },
+    {
       title: "Pinekle",
       description:
         "Pinekle, anılarını haritaya iliştirmeni sağlayan herkese açık bir pin ekleme uygulamasıdır.",
