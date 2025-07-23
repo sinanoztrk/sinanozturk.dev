@@ -57,6 +57,19 @@ docker rm sinanozturk.dev
 - ✅ **Bun Desteği**: Hızlı paket yöneticisi
 - ✅ **Production Ready**: Build ve serve optimizasyonu
 
+### 🚀 Zero-Downtime Deployment
+```bash
+# Tek komutla zero-downtime deployment
+docker compose up -d --build
+```
+
+Bu komut:
+1. Yeni image'ı build eder
+2. Eski container'ı durdurur
+3. Yeni container'ı başlatır
+4. Health check ile kontrol eder
+5. Hata durumunda otomatik restart
+
 https://github.com/user-attachments/assets/e4f007a3-9316-4f3a-a1fd-352d3af60d11
 
 <img src="https://github.com/user-attachments/assets/00903906-c8bf-42d2-81b7-337ba76ea890" width="256px">
