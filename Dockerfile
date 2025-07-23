@@ -15,7 +15,7 @@ ENV PATH="/root/.bun/bin:${PATH}"
 
 # Package.json ve package-lock.json dosyalarını kopyala
 COPY package*.json ./
-COPY bun.lockb ./
+COPY bun.lock ./
 
 # Bağımlılıkları yükle
 RUN bun install
