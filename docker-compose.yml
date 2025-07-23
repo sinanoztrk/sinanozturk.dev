@@ -1,9 +1,9 @@
-version: '3.8'
+name: sinanozturk
 
 services:
   sinanozturk-web:
     build: .
-    image: sinanozturk-web
+    image: sinanozturk-web:latest
     container_name: sinanozturk-web
     ports:
       - "8081:8081"
