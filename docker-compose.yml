@@ -1,9 +1,10 @@
 version: '3.8'
 
 services:
-  sinanozturk-app:
+  sinanozturk-web:
     build: .
-    container_name: sinanozturk-app-web
+    image: sinanozturk-web
+    container_name: sinanozturk-web
     ports:
       - "8081:8081"
     environment:
