@@ -6,7 +6,7 @@ services:
     image: sinanozturk-web:latest
     container_name: sinanozturk-web
     ports:
-      - "4000:8081"
+      - "1998:8081"
     environment:
       - NODE_ENV=production
     restart: unless-stopped
