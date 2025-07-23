@@ -9,7 +9,7 @@ Bu projeyi Docker ile kolayca çalıştırabilirsiniz:
 ### Hızlı Başlangıç
 ```bash
 # Tek komutla build ve çalıştır
-docker compose down && docker compose up -d --build
+docker compose up -d --build
 ```
 
 ### Manuel Adımlar
