@@ -2,6 +2,61 @@
 
 Template and components that I use in Expo Router apps that are generally optimized for iOS, dark mode, and servers. Main part is the forms which look like Apple's settings app. These should be replaced with proper SwiftUI/Jetpack Compose in the future, but it's still useful to have JS versions for platforms that don't have native support.
 
+## 🐳 Docker ile Çalıştırma
+
+Bu projeyi Docker ile kolayca çalıştırabilirsiniz:
+
+### Hızlı Başlangıç
+```bash
+# Tek komutla build ve çalıştır
+docker compose down && docker compose up -d --build
+```
+
+### Manuel Adımlar
+```bash
+# 1. Docker image'ını build et
+docker build -t sinanozturk .
+
+# 2. Container'ı çalıştır
+docker run -d -p 8081:8081 --name sinanozturk.dev sinanozturk
+
+# 3. Erişim
+# http://localhost:8081
+```
+
+### Docker Compose ile
+```bash
+# Başlat
+docker compose up -d
+
+# Durdur
+docker compose down
+
+# Logları gör
+docker compose logs -f
+```
+
+### Container Yönetimi
+```bash
+# Container'ı durdur
+docker stop sinanozturk.dev
+
+# Container'ı başlat
+docker start sinanozturk.dev
+
+# Container'ı yeniden başlat
+docker restart sinanozturk.dev
+
+# Container'ı sil
+docker rm sinanozturk.dev
+```
+
+### Özellikler
+- ✅ **Port 8081**: Otomatik port yapılandırması
+- ✅ **Hot Reload**: Geliştirme için volume mount
+- ✅ **Bun Desteği**: Hızlı paket yöneticisi
+- ✅ **Production Ready**: Build ve serve optimizasyonu
+
 https://github.com/user-attachments/assets/e4f007a3-9316-4f3a-a1fd-352d3af60d11
 
 <img src="https://github.com/user-attachments/assets/00903906-c8bf-42d2-81b7-337ba76ea890" width="256px">
